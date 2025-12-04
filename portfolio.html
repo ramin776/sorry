@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message from My Heart</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fce4ec; /* Soft pink background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Container for the content */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #d81b60; /* Deep pink for headlines */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        /* Password Gate Styling */
+        #password-gate {
+            padding: 50px;
+        }
+
+        #password-input {
+            padding: 10px;
+            width: 70%;
+            max-width: 300px;
+            margin-right: 10px;
+            border: 2px solid #ff99bb;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        #submit-password {
+            padding: 10px 20px;
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        #submit-password:hover {
+            background-color: #a00037;
+        }
+        
+        #error-message {
+            color: #e53935;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Main Content Styling */
+        #main-content {
+            display: none; /* Hidden until password is entered */
+        }
+
+        .apology-message {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #ffd1dc;
+            padding-bottom: 30px;
+        }
+
+        .apology-message h2 {
+            color: #d81b60;
+            font-size: 2em;
+        }
+
+        /* Photo Gallery Styling */
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .photo-item {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .caption-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(216, 27, 96, 0.85); /* Semi-transparent deep pink */
+            color: white;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-out;
+            pointer-events: none; /* Allows clicks to go through to the photo */
+        }
+        
+        /* Show overlay on hover */
+        .photo-item:hover .caption-overlay {
+            transform: translateY(0);
+        }
+
+        /* Final Button Styling */
+        .action-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4CAF50; /* Green for positive action */
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            transition: background-color 0.3s;
+        }
+
+        .action-button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="password-gate" class="container">
+        <h1>Welcome to Our Secret Place 🤫</h1>
+        <p>To enter this memory, please provide our **magic word**.</p>
+        <input type="password" id="password-input" placeholder="Enter password here..." autofocus>
+        <button id="submit-password">Enter</button>
+        <p id="error-message" style="display:none;">That's not it, silly. Try our special date!</p>
+    </div>
+
+    <div id="main-content" class="container">
+        
+        <div class="apology-message">
+            <img src="e.jpeg" alt="A photo of the two of you" style="width:150px; height:150px; object-fit: cover; border-radius:50%; margin-bottom:20px;">
+            <h2>I Am So Incredibly Sorry.</h2>
+            <p>
+                Babu, I know that what I said earlier was hurtful, and I deeply regret raising my voice at you. **It was unfair, and you absolutely did not deserve it.** I was wrong, and I take full responsibility for my actions.
+            </p>
+            <p>
+                I love you more than words can say, and seeing you upset is the last thing I ever want. Please, know that my anger had nothing to do with you. I promise to communicate better and treat your beautiful feelings with the kindness and respect they deserve.
+            </p>
+        </div>
+
+        <h3>The Reasons I Love You ❤️</h3>
+        <p>Every picture here is a promise of how much better I will be for you. Scroll over them to see a special note.</p>
+
+        <div class="photo-grid">
+            
+            <div class="photo-item">
+                <img src="b.jpeg" alt="Description of Photo 1">
+                <div class="caption-overlay">
+                    "I love this laugh. It's my favorite sound in the world."
+                </div>
+            </div>
+
+            <div class="photo-item">
+                <img src="c.jpeg" alt="Description of Photo 2">
+                <div class="caption-overlay">
+                    "This adventure was the best. Thank you for making every trip amazing."
+                </div>
+            </div>
+            
+            <div class="photo-item">
+                <img src="d.jpeg" alt="Description of Photo 3">
+                <div class="caption-overlay">
+                    "Thank you for being so strong and supportive, especially during that time."
+                </div>
+            </div>
+
+            <div class="photo-item">
+                <img src="a.jpeg" alt="Description of Photo 4">
+                <div class="caption-overlay">
+                    "Even on a random Tuesday, you make my life complete."
+                </div>
+            </div>
+
+            </div>
+        
+        <p style="margin-top: 50px;">
+            I hope this shows you how much I cherish you and every moment we share. You are my home, my best friend, and the love of my life.
+        </p>
+
+        <a href="JAVASCRIPT:VOID(0);" class="action-button" onclick="alert('I promise to make it up to you! Now, look for my text message...');">
+            I Forgive You ❤️
+        </a>
+
+    </div>
+
+    <script>
+        // --- 1. CHANGE THIS PASSWORD! ---
+        const correctPassword = "isugu"; // Example: use a date like '07142021' or a pet name like 'SweetiePie'
+
+        const gate = document.getElementById('password-gate');
+        const content = document.getElementById('main-content');
+        const input = document.getElementById('password-input');
+        const button = document.getElementById('submit-password');
+        const errorMsg = document.getElementById('error-message');
+
+        function checkPassword() {
+            if (input.value.toUpperCase() === correctPassword.toUpperCase()) {
+                // Password is correct: hide gate, show content
+                gate.style.display = 'none';
+                content.style.display = 'block';
+                document.body.style.backgroundColor = '#fff'; // Change background after entry
+            } else {
+                // Password is incorrect: show error
+                errorMsg.style.display = 'block';
+                input.value = ''; // Clear the input
+                input.focus();
+            }
+        }
+
+        // Check password when button is clicked
+        button.addEventListener('click', checkPassword);
+
+        // Check password when Enter key is pressed in the input field
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+
+</body>
+</html>
